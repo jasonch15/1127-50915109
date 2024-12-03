@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Firebase Google 登入/註冊系統</title>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link href="styles.css" rel="stylesheet" />
+    <script type="module" src="main.js"></script>
+  </head>
+
+  <body class="flex items-center justify-center min-h-screen p-4 bg-black">
+    <div class="glass-effect p-8 rounded-lg max-w-5xl w-full">
+      <!-- 主標題 -->
+      <h1 class="text-3xl font-bold text-gray-200 mb-8 text-center">
+        Firebase Google 登入/註冊系統
+      </h1>
+
+      <!-- 布局容器 -->
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+        <!-- 登入/註冊區域 -->
+        <div id="auth-section" class="space-y-4">
+          <button
+            id="register-button"
+            class="button-hover w-full bg-gray-800 text-gray-300 font-semibold py-3 px-6 rounded-lg flex items-center justify-center"
+          >
+            <svg class="w-5 h-5 mr-2" viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"
+                fill="#4285F4"
+              />
+              <path
+                d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"
+                fill="#34A853"
+              />
+              <path
+                d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"
+                fill="#FBBC05"
+              />
+              <path
+                d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"
+                fill="#EA4335"
+              />
+            </svg>
+            使用 Google 註冊
+          </button>
+
+          <button
+            id="login-button"
+            class="button-hover w-full bg-indigo-600 text-white font-semibold py-3 px-6 rounded-lg flex items-center justify-center"
+          >
+            <svg
+              class="w-5 h-5 mr-2"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1"
+              />
+            </svg>
+            使用 Google 登入
+          </button>
+        </div>
+
+        <!-- 筆記管理區域 -->
+        <div id="notes-section" class="hidden">
+          <div id="user-info" class="mb-6"></div>
+
+          <div class="bg-gray-800 rounded-lg p-6">
+            <h2 class="text-2xl font-bold mb-4 text-white">筆記管理</h2>
+            <form id="note-form" class="space-y-4">
+              <textarea
+                id="note-input"
+                class="w-full p-2 border rounded bg-gray-700 text-white"
+                placeholder="輸入筆記內容..."
+                rows="4"
+              ></textarea>
+              <button
+                type="submit"
+                class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded"
+              >
+                新增筆記
+              </button>
+            </form>
+
+            <div class="mt-6">
+              <h3 class="text-xl font-semibold text-white mb-4">我的筆記</h3>
+              <ul id="notes-list" class="space-y-3">
+                <!-- 動態插入筆記 -->
+              </ul>
+            </div>
+          </div>
+
+          <button
+            id="logout-button"
+            class="mt-4 bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded"
+          >
+            登出
+          </button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

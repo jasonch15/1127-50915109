@@ -1,0 +1,104 @@
+/* 整體背景統一 */
+body {
+  background: linear-gradient(135deg, #1c1c1c, #2a2a2a);
+  color: #f0f0f0;
+  font-family: "Roboto", sans-serif;
+}
+
+/* 卡片化設計 */
+.glass-effect {
+  background: rgba(40, 40, 40, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
+  border-radius: 12px;
+}
+
+/* 用戶信息樣式 */
+#user-info {
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  background: rgba(50, 50, 50, 0.9);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+#user-info img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 2px solid #0078d7;
+}
+
+#user-info h2 {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+#user-info p {
+  font-size: 0.9rem;
+  color: #b0b0b0;
+}
+
+/* 筆記管理背景與按鈕樣式 */
+#notes-section {
+  padding: 1rem;
+  background: rgba(50, 50, 50, 0.9);
+  border-radius: 12px;
+}
+
+#notes-list li {
+  padding: 0.8rem;
+  margin-bottom: 0.5rem;
+  background: linear-gradient(135deg, #2a2a2a, #3a3a3a);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#notes-list li button {
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  border-radius: 8px;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+#notes-list li .bg-yellow-500 {
+  background: #ff9800;
+}
+
+#notes-list li .bg-yellow-500:hover {
+  background: #e68a00;
+}
+
+#notes-list li .bg-red-500 {
+  background: #f44336;
+}
+
+#notes-list li .bg-red-500:hover {
+  background: #d32f2f;
+}
+
+/* 統一按鈕設計 */
+button {
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#note-form button {
+  background: #0078d7;
+  color: white;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+#note-form button:hover {
+  background: #005ea1;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
